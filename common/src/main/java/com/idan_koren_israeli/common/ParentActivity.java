@@ -1,8 +1,11 @@
 package com.idan_koren_israeli.common;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.FrameLayout;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,8 +22,9 @@ public class ParentActivity extends AppCompatActivity {
     protected TextView car_list_LBL_open;
     protected TextView car_list_LBL_address;
     protected ListView car_list_LV_list;
+    protected TextView car_list_LBL_viewtype;
 
-    private ArrayList<String> carsAdapter = new ArrayList<>();
+    protected FrameLayout car_list_LAY_loading;
 
     private static final String GARAGE_KEY = "WypPzJCt";
 
@@ -29,13 +33,11 @@ public class ParentActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_car_list);
 
-        car_list_LBL_title = findViewById(R.id.car_list_LBL_title);
-        car_list_LBL_open = findViewById(R.id.car_list_LBL_open);
-        car_list_LBL_address = findViewById(R.id.car_list_LBL_address);
-        car_list_LV_list = findViewById(R.id.car_list_LV_list);
 
+        findViews();
 
         downloadGarageData();
+        showLoading();
 
     }
 
@@ -62,6 +64,25 @@ public class ParentActivity extends AppCompatActivity {
 
         car_list_LV_list.setAdapter(arrayAdapter);
 
+        hideLoading();
 
     }
+
+    private void showLoading(){
+        car_list_LAY_loading.setVisibility(View.VISIBLE);
+    }
+
+    private void hideLoading() {
+        car_list_LAY_loading.setVisibility(View.INVISIBLE);
+    }
+
+    private void findViews(){
+        car_list_LBL_title = findViewById(R.id.car_list_LBL_title);
+        car_list_LBL_open = findViewById(R.id.car_list_LBL_open);
+        car_list_LBL_address = findViewById(R.id.car_list_LBL_address);
+        car_list_LV_list = findViewById(R.id.car_list_LV_list);
+        car_list_LAY_loading = findViewById(R.id.car_list_LAY_loading);
+        car_list_LBL_viewtype = findViewById(R.id.car_list_LBL_viewtype);
+    }
+
 }

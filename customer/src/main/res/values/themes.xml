@@ -12,6 +12,8 @@
         <item name="android:textColorPrimary">@color/green_500</item>
         <item name="android:textColorSecondary">@color/green_500</item>
         <item name="android:textColorTertiary">@color/green_500</item>
+
+        <item name="colorControlActivated">@color/green_400</item>
     </style>
 
 
