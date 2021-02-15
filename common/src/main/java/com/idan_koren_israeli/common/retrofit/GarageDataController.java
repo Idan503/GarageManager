@@ -1,4 +1,4 @@
-package com.idan_koren_israeli.common.retrofit_load;
+package com.idan_koren_israeli.common.retrofit;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

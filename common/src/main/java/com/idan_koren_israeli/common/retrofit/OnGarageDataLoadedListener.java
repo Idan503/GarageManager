@@ -1,4 +1,4 @@
-package com.idan_koren_israeli.common.retrofit_load;
+package com.idan_koren_israeli.common.retrofit;
 
 import com.idan_koren_israeli.common.GarageData;
 

@@ -1,3 +1,4 @@
+include ':timeLogger'
 include ':customer'
 include ':common'
 include ':garage'
