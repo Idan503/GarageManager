@@ -10,7 +10,7 @@ A garage tracker project for practicing Android technologies:
 ## Screenshots
   <p float="left" align="middle" padding="10">
   <img src="/screenshots/garage_side.jpeg?raw=true" width="260" />
-  <img src="" width="45" />
+  <img src="/screenshots/transparent.png?raw=true" width="65" />
   <img src="/screenshots/customer_side.jpeg?raw=true" width="260" />
 </p>
 
